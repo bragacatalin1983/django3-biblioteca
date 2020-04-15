@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+        }
+
+      .navbar {
+        margin: 0.2rem 0.3rem 0.2rem 103rem;
+      }
+
+      .navbar button {
+        padding: 1rem 2rem;
+        background-color: rgb(220, 217, 224);
+        border: 0.1rem solid rgb(124, 119, 192);
+        margin: 0.6rem 0.2rem;
+        border-radius: 0.5rem;
+        border-top-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+      h1 {
+        color: rgb(199, 153, 37);
+        margin: 0.1rem 10rem 0.2rem 15rem;
+        padding: 0.1rem 2rem 2rem 2rem;
+        position: center;
+        font-size: 3rem;
+        text-align: center;
+      }
+      h3 {
+          color: rgb(9, 9, 75);
+          font-size: 2rem;
+          text-align: center;
+      }
+
+      h2 {
+          color: rgb(114, 55, 55);
+          font-size: 2rem;
+          text-align: center;
+          margin: 1rem ;
+      }
+      h4 {
+          color: rgb(114, 55, 55);
+          font-size: 2rem;
+          text-align: center;
+          margin: 1rem ;
+      }
+      img {
+        margin: 1rem 55rem;
+      }
+      html {
+      background-color : rgb(185, 194, 155);
+      }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+      <button><a href="{% url 'home' %}">Home</a></button>
+      <button><a href="{% url 'blog:all_blogs' %}">Blog</a></button>
+      <button><a href="https://www.youtube.com/watch?v=kMTVWAWC7Qc">Copii</a></button>
+      <button><a href="https://bragadancatalin.wixsite.com/website/about">About</a></button>
+    </nav>
+    <h1>Aceasta este pagina blogului</h1>
+    {% for x in blog %}
+    <a href="{% url 'blog:blog_id' x.id %}"><h2><h2>{{x.title}}</h2><img src="{{x.image.url}}" height="200" width="300"></h2></a>
+    <h3>Scurta descriere: {{x.description |striptags| truncatechars:50 }}</h3>
+    <h4>{{x.date}}</h4>
+    {% endfor %}
+
+
+
+</body>
+</html>

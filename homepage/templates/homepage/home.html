@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="O pagina distractiva a Bibliotecii Judetene Mehedinti!"
+    />
+    <link rel="icon" href="media/homepage/image/books_library_1768.ico"/>
+
+    <title>Bjm</title>
+    <style>
+
+        * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      h1 {
+        color: rgb(199, 153, 37);
+        margin: 0.1rem 10rem 0.2rem 15rem;
+        padding: 0.1rem 2rem 2rem 2rem;
+        position: center;
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      img {
+        height: 48rem;
+        width: 100%;
+      }
+
+      .navbar {
+        margin: 0.2rem 0.3rem 0.2rem 103rem;
+      }
+
+      .navbar button {
+        padding: 1rem 2rem;
+        background-color: rgb(220, 217, 224);
+        border: 0.1rem solid rgb(124, 119, 192);
+        margin: 0.6rem 0.3rem;
+        border-radius: 0.5rem;
+        border-top-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+
+      .home a {
+        color: rgb(124, 119, 192);
+        font-size: 1.5rem;
+      }
+
+      .poze img {
+        width: 30%;
+        height: 35rem;
+        padding: 3rem 1rem;
+        margin: 2rem 1rem 2rem 1rem;
+      }
+
+      .sf h2 {
+        color: rgb(199, 153, 37);
+        margin: auto;
+        padding: 0.1rem 2rem 2rem 2rem;
+        position: center;
+        font-size: 3rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <button><a href="{% url 'home' %}">Home</a></button>
+      <button><a href="{% url 'blog:all_blogs' %}">Blog</a></button>
+      <button><a href="https://www.youtube.com/watch?v=kMTVWAWC7Qc">Copii</a></button>
+      <button><a href="https://bragadancatalin.wixsite.com/website/about">About</a></button>
+    </nav>
+    <h1 class="first-title">
+      Bine ati venit!Ne-am gandit sa va oferim un preview pentru crash course-ul
+      de HTML si CSS pentru viitor la biblioteca!!!
+    </h1>
+    {% load static %}
+    <img src="media/homepage/image/white-book-in-white-table-near-yellow-wall-3760323.jpg"/>
+    <br /><video
+      controls
+      src="media/homepage/image/y2mate.com - code_stars_short_film_dU1xS07N-FA_1080p.mp4"
+      width="100%"
+      height="700"
+    ></video>
+    <figure class="poze">
+      <img src="media/homepage/image/book-chapter-six-5834.jpg"/>
+      <img src="media/homepage/image/Screenshot_2.png" />
+      <img src="media/homepage/image/photo-of-teacup-on-top-of-books-1831744.jpg" />
+    </figure>
+    <footer class="sf">
+      <h2>
+        Si tu poti crea un webpage ca acesta! Te asteptam cu drag la biblioteca!
+      </h2>
+    </footer>
+  </body>
+</html>
